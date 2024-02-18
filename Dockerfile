@@ -23,4 +23,4 @@ RUN pip install pyaudio
 
 
 # Define the command to run your application
-CMD ["uvicorn", "main:app", "--reload", "[::]:$PORT"]
+CMD ["uvicorn", "main:app", "--reload", "--host", "0.0.0.0", "--port", "$PORT"]
