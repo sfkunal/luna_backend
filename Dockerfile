@@ -23,4 +23,4 @@ RUN pip install pyaudio
 
 
 # Define the command to run your application
-CMD ["hypercorn", "main:app", "--bind", "[::]:$PORT"]
+CMD ["uvicorn", "main:app", "--bind", "[::]:$PORT"]
