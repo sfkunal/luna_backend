@@ -21,6 +21,12 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Install pyaudio
 RUN pip install pyaudio
 
+# Make port available to the world outside this container
+EXPOSE ${PORT:-5000}
+
+# Define environment variable
+ENV PORT=${PORT:-5000}
+
 
 # Define the command to run your application
 CMD ["hypercorn", "main:app", "--bind", "0.0.0.0:${PORT:-5000}"]
