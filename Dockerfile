@@ -29,5 +29,5 @@ ENV PORT=${PORT:-5000}
 
 
 # Define the command to run your application
-CMD ["hypercorn", "main:app", "--bind", "0.0.0.0:${PORT:-5000}"]
+CMD ["hypercorn", "main:app", "--bind", "0.0.0.0:$PORT"]
 # CMD ["hypercorn", "main:app", "--bind", "[::]:$PORT"]
